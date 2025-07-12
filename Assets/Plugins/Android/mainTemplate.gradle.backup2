@@ -1,0 +1,43 @@
+// ← mainTemplate.gradle
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.application'
+
+// Unity rellenará estas variables automáticamente:
+android {
+    compileSdkVersion 32
+
+    defaultConfig {
+        applicationId "${applicationId}"
+        minSdkVersion 22
+        targetSdkVersion 32
+        versionCode ${versionCode}
+        versionName "${versionName}"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                           'proguard-user.txt'
+        }
+    }
+}
+
+// Incluir el script de la librería Unity
+apply from: 'unityLibrary.gradle'

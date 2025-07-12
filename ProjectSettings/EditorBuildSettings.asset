@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/imagenes/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/opcionessolen.unity
+    guid: f274382da7fef1b428df1bb20a282585
+  - enabled: 1
+    path: Assets/camaraop.unity
+    guid: 7acbafc733a3d5f4b8dce93058dcd10b
+  - enabled: 1
+    path: Assets/iniciarsesion.unity
+    guid: 6bb7d3c49c7328e479f8662da9dd9d7f
+  - enabled: 1
+    path: Assets/Scenes/Introduction/Introduction.unity
+    guid: e9b8bd115f0958043b4160c88b0d0c42
+  - enabled: 0
+    path: Assets/chatbot.unity
+    guid: 51c2057c3bf053b4e9c592d71815c1e8
+  - enabled: 1
+    path: Assets/textbot.unity
+    guid: 93ed737e4f3ef00478bd0eb61f3a0cb0
+  - enabled: 1
+    path: Assets/CrearCuenta.unity
+    guid: 2face59977ac44246a0e31a6f62f7214
+  - enabled: 1
+    path: Assets/Maestro.unity
+    guid: dc9721d1278eace43aac379723b37736
+  - enabled: 1
+    path: Assets/jugarmapa.unity
+    guid: 7a243fba50a90134eb52d66f22c338c3
+  - enabled: 1
+    path: Assets/insg.unity
+    guid: 17813e795fc96014db3070767953c6f7
+  - enabled: 1
+    path: Assets/Exploracion.unity
+    guid: 0284305de3fdc7d44b405a69165fc622
+  - enabled: 1
+    path: Assets/Huellas en el pasaje.unity
+    guid: 53e9fe067c87fbe4f93f10db7e5c2f8d
+  - enabled: 1
+    path: Assets/Patronales.unity
+    guid: 65dfce8886ffb594fa664f2ba534dbc7
+  - enabled: 1
+    path: Assets/Arboles Espinosos.unity
+    guid: adc12e3ccd6155c4d958ab9a4008ad6f
+  - enabled: 1
+    path: Assets/Investigacion.unity
+    guid: d3f62e861de122542901412b822fed2c
+  - enabled: 1
+    path: Assets/Deduccion.unity
+    guid: d8058102bf0a7cc41a6708ec62bb6f55
+  - enabled: 1
+    path: Assets/Carta Cerrada.unity
+    guid: aaa216b9177d89b4ea6624a99bde46df
+  - enabled: 1
+    path: Assets/Angulos en la ciudad.unity
+    guid: 36eb50ea6a1fc6c47a7ab1bd775e620e
+  - enabled: 1
+    path: Assets/Rollo.unity
+    guid: 8dfbeae2f71c8cb42b2655c057c7fef6
+  - enabled: 1
+    path: Assets/Catedral.unity
+    guid: 035bc53e17ac0f5499c5349327f04359
+  - enabled: 0
+    path: Assets/Sol-Lupa.unity
+    guid: 21b5585924747dc40899d0b0a6b1c61c
+  - enabled: 1
+    path: Assets/CantidadInsg.unity
+    guid: 8e5e348b3fb5c834983e9b139ae40699
+  - enabled: 1
+    path: Assets/Puntos Cardinales.unity
+    guid: 3d1790817c259f949b428daaca0c46a1
+  - enabled: 1
+    path: Assets/Cronografo.unity
+    guid: baf378f7ac1315a4f80ce2d606fb7550
+  - enabled: 1
+    path: Assets/Dos Capillas.unity
+    guid: 143ff53ce8325e3428edd7522673f69b
+  - enabled: 1
+    path: Assets/Viajero por el tiempo.unity
+    guid: f5da9d915f6982a42b928f9159b27fce
+  - enabled: 1
+    path: Assets/Jurar.unity
+    guid: ad86d1c27c4b0aa4aa2fa2d1fb26e5fe
+  - enabled: 1
+    path: Assets/Scenes/AR-SanMartin/AR-SanMartin.unity
+    guid: c3aebb25a5d50c646bb5f02461c435e6
+  m_configObjects: {}
