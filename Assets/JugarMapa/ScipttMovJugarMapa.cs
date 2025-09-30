@@ -1,14 +1,12 @@
 using UnityEngine;
 
-public class MapMovement : MonoBehaviour
+public class MapMovementUI : MonoBehaviour
 {
-    public float dragSpeed = 30f; // Velocidad de arrastre
-    public float minX = -1060f; // Valor mínimo de la posición X
-    public float maxX = 2500f; // Valor máximo de la posición X
-    public float minY = 1100f; // Valor mínimo de la posición Y
-    public float maxY = 2000f; // Valor máximo de la posición Y
+    public RectTransform mapRect;      // La imagen del mapa
+    public RectTransform canvasRect;   // El área visible (pantalla)
+    public float dragSpeed = 0.5f;     // Velocidad ajustable (reducida)
 
-    private Vector3 dragOrigin; // Origen del arrastre
+    private Vector2 dragOrigin;
 
     void Update()
     {
@@ -20,15 +18,17 @@ public class MapMovement : MonoBehaviour
 
         if (!Input.GetMouseButton(0)) return;
 
-        Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
-        Vector3 move = new Vector3(pos.x * dragSpeed, pos.y * dragSpeed, 0);
+        Vector2 delta = (Vector2)Input.mousePosition - dragOrigin;
+        dragOrigin = Input.mousePosition;
 
-        // Aplicar restricciones de movimiento
-        Vector3 newPos = transform.position - move;
-        newPos.x = Mathf.Clamp(newPos.x, minX, maxX);
-        newPos.y = Mathf.Clamp(newPos.y, minY, maxY);
+        Vector2 newPos = mapRect.anchoredPosition + delta * dragSpeed;
 
-        // Aplicar el movimiento a la posición del objeto del mapa
-        transform.position = newPos;
+        float limitX = (mapRect.rect.width - canvasRect.rect.width) / 2f;
+        float limitY = (mapRect.rect.height - canvasRect.rect.height) / 2f;
+
+        newPos.x = Mathf.Clamp(newPos.x, -limitX, limitX);
+        newPos.y = Mathf.Clamp(newPos.y, -limitY, limitY);
+
+        mapRect.anchoredPosition = newPos;
     }
 }

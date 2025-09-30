@@ -5,6 +5,6 @@ public class IrAAngulos : MonoBehaviour
 {
     public void IrAEscenaAngulos()
     {
-        SceneManager.LoadScene("Angulos en la ciudad");
+        SceneManager.LoadScene("Ángulos en la ciudad");
     }
 }

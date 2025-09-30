@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // Para cambiar de escena
 
 public class CartelIncorrectoManager : MonoBehaviour
 {
@@ -37,5 +38,12 @@ public class CartelIncorrectoManager : MonoBehaviour
 
         if (botonPrincipal != null)
             botonPrincipal.SetActive(true);
+    }
+
+    // 👉 Función para el botón Aceptar: cierra cartel y va a la escena
+    public void AceptarYCambiarEscena()
+    {
+        cartelIncorrecto.SetActive(false); // Ocultar cartel
+        SceneManager.LoadScene("insg");    // Ir a la escena
     }
 }

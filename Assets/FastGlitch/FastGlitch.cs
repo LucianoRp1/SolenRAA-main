@@ -27,14 +27,14 @@ public class FastGlitch : MonoBehaviour
         if (ChromaticGlitch != 0)
         {
             a = (1.0f + Mathf.Sin(t * 6.0f)) * ((0.5f + Mathf.Sin(t * 16.0f) * 0.25f)) * (0.5f + Mathf.Sin(t * 19.0f) * 0.25f) * (0.5f + Mathf.Sin(t * 27.0f) * 0.25f);
-            material.SetFloat(amountString, ChromaticGlitch * Mathf.Pow(a, 3.0f) * 0.5f);
+            material.SetFloat(amountString, ChromaticGlitch * Mathf.Pow(a, 3f) * 20f);
         }
         else
             material.SetFloat(amountString, 0f);
 
         if (FrameGlitch != 0)
         {
-            material.SetFloat(frameString, (1.0f + Mathf.Cos(t * 80.0f)) * 0.02f * FrameGlitch);
+            material.SetFloat(frameString, (1.0f + Mathf.Cos(t * 180.0f)) * 0.02f * FrameGlitch);
             material.EnableKeyword(frameKeyword);
         }
         else
@@ -44,7 +44,7 @@ public class FastGlitch : MonoBehaviour
         {
             b = Mathf.Sin(Vector2.Dot(rand1 * Mathf.Floor(t * 12.0f), randMul2)) * 43758.5453123f;
             c = Mathf.Sin(Vector2.Dot(rand2 * Mathf.Floor(t * 12.0f), randMul2)) * 43758.5453123f;
-            material.SetVector(pixelString, new Vector2((b - Mathf.Floor(b)) * PixelGlitch * 0.1f, (c - Mathf.Floor(c)) * PixelGlitch * 0.1f));
+            material.SetVector(pixelString, new Vector2((b - Mathf.Floor(b)) * PixelGlitch * 0.2f, (c - Mathf.Floor(c)) * PixelGlitch * 0.5f));
             material.EnableKeyword(pixelKeyword);
         }
         else
